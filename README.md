@@ -1,2 +1,2 @@
-eloquentjavascript
+Eloquent Javasctipt
 ==================
