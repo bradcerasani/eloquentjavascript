@@ -71,5 +71,22 @@ This is the first line
 And this is the second
 ```
 
+Strings cannot be divided, multiplied, or subtracted, but the + operator can be used to concatenate them:
+
+```
+"con" + "cat" + "e" + "nate"
+```
+
+### Unary Operators
+
+Not all operators are symbols; some are written as words.
+
+```
+console.log(typeof 4.5)
+// -> number
+console.log(typeof "x")
+// -> string
+```
+
 
 
