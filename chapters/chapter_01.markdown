@@ -88,5 +88,35 @@ console.log(typeof "x")
 // -> string
 ```
 
+Operators (like `typeof`) that use two values are called _binary_ operators, while those that only take one are called _unary_ operators. The minus operator can be used both as a _binary_ operator and as a _unary_ operator:
+
+```
+console.log(- (10 - 2))
+// -> -8
+
+### Boolean Values
+
+`true` and `false`
+
+##### Comparisons
+
+```
+console.log(3 > 2)
+// -> true
+console.log(3 < 2)
+// -> false
+```
+
+The > and < signs are the traditional symbols for "is greater than" and "is less than", respectively. They are binary operators.
+
+Strings can be compared just like numbers:
+
+```console.log("Aardvark" < "Zoroaster")
+// -> true
+```
+
+
+
+
 
 
