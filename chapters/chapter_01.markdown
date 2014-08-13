@@ -130,6 +130,6 @@ The only value in JavaScript that is not equal to itself is `NaN` ("not a number
 
 ##### Logical Operators
 
-
+Some operations can be applied to Boolean values: `and`, `or`, and `not`. These can be used to "reason" about Booleans.
 
 
