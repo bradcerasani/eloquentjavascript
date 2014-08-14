@@ -111,10 +111,21 @@ The > and < signs are the traditional symbols for "is greater than" and "is less
 
 Strings can be compared just like numbers:
 
-```console.log("Aardvark" < "Zoroaster")
+```
+console.log("Aardvark" < "Zoroaster")
 // -> true
 ```
 
+Uppercase letters are always "less" than lowercase ones, so "Z" < "a" is true, and nonalphabetic characters (!, -, etc.) are also included in the ordering. The actual comparison is based on the Unicode standard.
+
+When comparing strings, JavaScript goes over them from left to right, comparing numeric codes of characters one by one.
+
+```
+console.log("Itchy" != "Scratchy")
+// -> true
+```
+
+The only value in JavaScript that is not equal to itself is `NaN` ("not a number").
 
 
 ##### Logical Operators
