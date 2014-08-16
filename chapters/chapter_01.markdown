@@ -132,4 +132,31 @@ The only value in JavaScript that is not equal to itself is `NaN` ("not a number
 
 Some operations can be applied to Boolean values: `and`, `or`, and `not`. These can be used to "reason" about Booleans.
 
+The && operator represents logical _and_. It is a binary operator, and its result is true only if both values given to it are true.
+
+```
+console.log(true && false)
+// -> false
+console.log(true && true)
+//-> true
+```
+
+The || operator denotes logical _or_. It produces true if either of the values are given to it are true.
+
+```
+console.log(false || true)
+//-> true
+console.log(false || false)
+//-> false
+```
+
+Not is written as an exclamation mark(!). It is a unary operator that flips the value given to it.
+
+```
+!true
+//-> false
+!false
+//-> true
+```
+
 
