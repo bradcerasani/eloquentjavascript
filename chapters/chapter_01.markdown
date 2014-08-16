@@ -159,4 +159,21 @@ Not is written as an exclamation mark(!). It is a unary operator that flips the 
 //-> true
 ```
 
+Expressions like the following do not need parentheses:
+
+`1 + 1 == 2 && 10 * 10 > 50`
+
+The last logical operator we will discuss is not unary, not binary, but _ternary_, operating on all three values. It is written with a question mark and a colon, like this:
+
+```
+console.log(true ? 1 : 2);
+// -> 1
+console.log(false ? 1 : 2);
+// -> 2
+```
+
+This one is called the _conditional_ operator (or sometimes just _ternary_ operator since it is the only such operator in the language). The value on the left of the question mark "picks" which of the other two values will come out. When it is true, the middle value is chosen, and when it is false, the value on the right comes out.
+
+### Undefined Values
+
 
