@@ -176,4 +176,8 @@ This one is called the _conditional_ operator (or sometimes just _ternary_ opera
 
 ### Undefined Values
 
+Two special values: `null` and `undefined`, that are u sed to denote teh absense of a meaningful value. They themselves are values, but carry no information.
+
+
+
 
