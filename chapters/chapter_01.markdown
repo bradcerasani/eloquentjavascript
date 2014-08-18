@@ -26,9 +26,10 @@ Calculations < 9 quadrillion are guaranteed to be precise. Calculations with fra
 
 ##### Arithmetic
 
-`100 + 4 * 11`
-
-`(100 + 4) * 11`
+```js
+100 + 4 * 11
+(100 + 4) * 11
+```
 
 _When in doubt about the order of operations, add parentheses._
 
@@ -52,9 +53,10 @@ Don't trust infinity-based computation. It isn't mathematically solid, and qill 
 
 The next basic data type is the _string_. Strings are used to represent text:
 
-`"Patch my boat with chewing gum"`
-
-`"Monkeys wave goodbye"`
+```js
+"Patch my boat with chewing gum"
+"Monkeys wave goodbye"
+```
 
 Both single quotes and double quotes can be used to mark strings as long as the quotes at the start and the end of the string match.
 
@@ -66,14 +68,14 @@ To put a newline in a string, use a backslash to escape the character that follo
 
 e.g. "This is the first line \nAnd this is the second"
 
-```
+```js
 This is the first line
 And this is the second
 ```
 
 Strings cannot be divided, multiplied, or subtracted, but the + operator can be used to concatenate them:
 
-```
+```js
 "con" + "cat" + "e" + "nate"
 ```
 
@@ -81,7 +83,7 @@ Strings cannot be divided, multiplied, or subtracted, but the + operator can be 
 
 Not all operators are symbols; some are written as words.
 
-```
+```js
 console.log(typeof 4.5)
 // -> number
 console.log(typeof "x")
@@ -90,9 +92,10 @@ console.log(typeof "x")
 
 Operators (like `typeof`) that use two values are called _binary_ operators, while those that only take one are called _unary_ operators. The minus operator can be used both as a _binary_ operator and as a _unary_ operator:
 
-```
+```js
 console.log(- (10 - 2))
 // -> -8
+```
 
 ### Boolean Values
 
@@ -100,7 +103,7 @@ console.log(- (10 - 2))
 
 ##### Comparisons
 
-```
+```js
 console.log(3 > 2)
 // -> true
 console.log(3 < 2)
@@ -111,7 +114,7 @@ The > and < signs are the traditional symbols for "is greater than" and "is less
 
 Strings can be compared just like numbers:
 
-```
+```js
 console.log("Aardvark" < "Zoroaster")
 // -> true
 ```
@@ -120,7 +123,7 @@ Uppercase letters are always "less" than lowercase ones, so "Z" < "a" is true, a
 
 When comparing strings, JavaScript goes over them from left to right, comparing numeric codes of characters one by one.
 
-```
+```js
 console.log("Itchy" != "Scratchy")
 // -> true
 ```
@@ -134,7 +137,7 @@ Some operations can be applied to Boolean values: `and`, `or`, and `not`. These 
 
 The && operator represents logical _and_. It is a binary operator, and its result is true only if both values given to it are true.
 
-```
+```js
 console.log(true && false)
 // -> false
 console.log(true && true)
@@ -143,7 +146,7 @@ console.log(true && true)
 
 The || operator denotes logical _or_. It produces true if either of the values are given to it are true.
 
-```
+```js
 console.log(false || true)
 //-> true
 console.log(false || false)
@@ -152,7 +155,7 @@ console.log(false || false)
 
 Not is written as an exclamation mark(!). It is a unary operator that flips the value given to it.
 
-```
+```js
 !true
 //-> false
 !false
@@ -165,7 +168,7 @@ Expressions like the following do not need parentheses:
 
 The last logical operator we will discuss is not unary, not binary, but _ternary_, operating on all three values. It is written with a question mark and a colon, like this:
 
-```
+```js
 console.log(true ? 1 : 2);
 // -> 1
 console.log(false ? 1 : 2);
@@ -178,6 +181,21 @@ This one is called the _conditional_ operator (or sometimes just _ternary_ opera
 
 Two special values: `null` and `undefined`, that are u sed to denote teh absense of a meaningful value. They themselves are values, but carry no information.
 
+### Automatic Type Conversion
 
+Here's JavaScript doing some weird shit:
+
+```js
+console.log(8 * null)
+// -> 0
+console.log("5" - 1)
+// -> 4
+console.log("5" + 1)
+// -> 51
+console.log("five" * 2)
+// -> NaN
+console.log(false == 0)
+// -> true
+```
 
 
