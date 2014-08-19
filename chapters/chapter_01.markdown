@@ -198,4 +198,23 @@ console.log(false == 0)
 // -> true
 ```
 
+When an operator is applied to the "wrong" type of value, JavaScript will quietly convert that value to the type it wants. This is process is called _type coercion_.
+
+When something that doesn't map to a number in an obvious way (such as `"five"` or `undefined`) is converted to a number, the value NaN is produced. Further arithmetic operations on NaN keep producing NaN, so if you find yourself getting one of those in an unexpected place, look for accidental type conversions.
+
+More weird shit:
+
+```js
+console.log(null == undefined)
+// -> true
+console.log(null == 0)
+// -> false
+```
+
+That last piece of behavior is often useful. When you want to test whether a value has a real value instead of `null` or `undefined`, compare it to `null` with the `==` or `!=` operators.
+
+
+
+
+
 
