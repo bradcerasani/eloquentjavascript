@@ -214,6 +214,22 @@ console.log(null == 0)
 That last piece of behavior is often useful. When you want to test whether a value has a real value instead of `null` or `undefined`, compare it to `null` with the `==` or `!=` operators.
 
 
+Boolean values state that `0`, `Nan`, and the empty string`""` count as `false`, while all other values count as `true`. If you want to test whether something refers to the precise value `false`, use either `====` or `!==`.
+
+It is recommended practice to use three-chracter comparison operators defensively to prevent unexpected type conversions.
+
+##### Short-Circuiting of Logical Operators
+
+When `&&` and `||` handle values of different types, they convert the value on the left side to a Boolean, and, depending on the operator and the result of that conversion, return either the _original_ left-hand value or the right-hand value.
+
+The `||` operator, for example, will return the value to its left when it can be converted ot true, and will return the value on the right otherwise.
+
+```js
+console.log(null || "user")
+//-> user
+console.log("Karl" || "user")
+//-> Karl
+```
 
 
 
