@@ -231,6 +231,12 @@ console.log("Karl" || "user")
 //-> Karl
 ```
 
+This functionality allows the `||` operator to be used as a way to fall back on a default value. If you give it an expression that might produce an empty value on the left, the value on the right will be used as a fallback.
 
+The `&&` operator works the other way around. When the value to its left is somethign that evaluates to false, it returns that value, otherwise it returns the value on its right.
 
+With both `&&` and `||`, the expression on the right is only evaluated when necessary. This is called _short-circuit evaluation_.
 
+### Summary
+
+We looked at four types of JavaScript values in this chapter: numbers, strings, Booleans, and undefined values. You can combine and transform values with operators. We saw binary operators for arithmetic (+, -, *, /, and %), string concatenation (+), comparison (==, !=, ===, !==, <, >, <=, >=), and logic (&&, ||), as well as several unary operators (- to negate a number, ! to negate logically, and typeof to find a value's type).
