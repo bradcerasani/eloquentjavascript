@@ -1,8 +1,8 @@
 # Program Structure
 
-"And my heart glows bright red under my filmy, translucent skin and they have to administer 10cc of JavaScript to get me to come back. (I respond well to toxins in the blood.) Man, that stuff will kick the peaches right out of your gills!"
-
--_why, Why's (Poignant) Guide to Ruby
-
 ### Expressions and Statements
+
+A fragment of code that produces a value is called an _expression_, as is a value written literally, i.e. `"41"` or `"waffles"`.
+
+In english language terms, _expression_ == sentence fragment, _statement_ == full sentence.
 
