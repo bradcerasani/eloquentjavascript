@@ -2,7 +2,7 @@
 
 ### Values
 
-Six basic types of values:
+There are six basic types of values:
 - numbers
 - strings
 - booleans
@@ -10,13 +10,13 @@ Six basic types of values:
 - functions
 - undefined
 
-To create a value, you invoke its name.
+To create a value, invoke its name.
 
 #### Numbers
 
-Javascript uses a fixed number of bits: 64. Given 64 binary digits, you can represent 2^64 different numbers (18 quintillion).
+JS uses a fixed number of bits: 64. With 64 binary digits it is possible to represent 2^64 different numbers (18 quintillion).
 
-Not all whole numbers below 18 quintillion fit in a JS number - those bits also store negative numbers and decimal points. THe actual maximum whole number is ~9 quadrillion.
+Negative numbers and decimal points also use these 64 digits, so the maximum _whole_ number in JS is ~9 quadrillion.
 
 **Fractional numbers:** `9.81`
 
@@ -33,47 +33,45 @@ Calculations < 9 quadrillion are guaranteed to be precise. Calculations with fra
 
 _When in doubt about the order of operations, add parentheses._
 
-The the `%` symbol is used to represent the _remainder_ operation. Remainder's precedence is the same as that of multiplication and division. You'll often see this operator referred to as _modulo_, though technically _remainder_ is more accurate.
+The the `%` symbol represents the _remainder_ operation (a.k.a. _modulo_). Remainder's precedence is the same as multiplication and divison.
 
 ##### Speical Numbers
 
-There are three special values in JS that are _considered_ numbers, but don't _behave_ like normal numbers:
+These three numbers don't behave like normal numbers:
 
 1. `Infinity`
 
 2. `-Infinity`
 
-Don't trust infinity-based computation. It isn't mathematically solid, and qill quickly lead to `NaN`.
+_Infinity-based computation will quickly lead to `NaN`. Don't trust it._
 
-2. `NaN`
+3. `NaN`
 
-`NaN` stands for "not a number", even though it is a value of the number type.
+_`NaN` ("not a number") is a value of the number type._
 
 ### Strings
 
-The next basic data type is the _string_. Strings are used to represent text:
+Strings are used to represent text:
 
 ```js
-"Patch my boat with chewing gum"
-"Monkeys wave goodbye"
+'I love scotch'
+"I'm gonna punch you right in the ovary"
 ```
 
-Both single quotes and double quotes can be used to mark strings as long as the quotes at the start and the end of the string match.
+Use single _or_ double quotes, just make sure they match.
 
-Almost anything can be put in between quotes, with a few exceptions:
-
-1. Newlines. Newlines can't be put between quotes.
-
-To put a newline in a string, use a backslash to escape the character that follows: `\n` is a newline.
+Almost anything can go inbetween quotes, except characters like _newlines_. To put a newline in a string, use `\n`.
 
 e.g. "This is the first line \nAnd this is the second"
+
+prints as
 
 ```js
 This is the first line
 And this is the second
 ```
 
-Strings cannot be divided, multiplied, or subtracted, but the + operator can be used to concatenate them:
+The + operator can be used to _concatenate_ strings:
 
 ```js
 "con" + "cat" + "e" + "nate"
@@ -81,7 +79,7 @@ Strings cannot be divided, multiplied, or subtracted, but the + operator can be 
 
 ### Unary Operators
 
-Not all operators are symbols; some are written as words.
+Not all operators are symbols; some are written as words:
 
 ```js
 console.log(typeof 4.5)
@@ -90,11 +88,11 @@ console.log(typeof "x")
 // -> string
 ```
 
-Operators (like `typeof`) that use two values are called _binary_ operators, while those that only take one are called _unary_ operators. The minus operator can be used both as a _binary_ operator and as a _unary_ operator:
+Operators that use two values are called _binary_ operators, while those that only take one (i.e. `typeof`) are called _unary_ operators. Minus can be used as binary or unary:
 
 ```js
-console.log(- (10 - 2))
-// -> -8
+console.log(- (12 - 6))
+// -> -6
 ```
 
 ### Boolean Values
@@ -104,13 +102,13 @@ console.log(- (10 - 2))
 ##### Comparisons
 
 ```js
-console.log(3 > 2)
+console.log(1 > 2)
 // -> true
-console.log(3 < 2)
+console.log(2 < 1)
 // -> false
 ```
 
-The > and < signs are the traditional symbols for "is greater than" and "is less than", respectively. They are binary operators.
+The > and < symbols ("is greater/less than") are binary operators.
 
 Strings can be compared just like numbers:
 
