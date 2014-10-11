@@ -52,3 +52,58 @@ var luigisDebt = 140;
 luigisDebt = luigisDebt - 35;
 console.log(luigisDebt);
 // -> 105
+```
+
+A single `var` statement can define multiple variables if the definitions are separated by commas.
+
+### Keywords and Reserved Words
+
+Some words in Javascript are keywords or reserved words, and may not be used as variable names. Here's a tatse:
+
+- break
+- case
+- catch
+- continue
+- debugger
+- default
+- delete
+- do
+- else
+- false
+- finally
+- for
+- function
+- if
+- implements
+- in
+- instanceof
+- interface
+- let
+- new
+- null
+- package
+- private
+- protected
+- public
+- return
+- static
+- switch
+- throw
+- true
+- try
+- typeof
+- var
+- void
+- while
+- with
+- yield
+- this
+
+If a variable definition is doing something weird, make sure you aren't using one of these reserved words.
+
+### The Environment
+
+The collection of variables and their values is called the _environment_. Some variables are part of the language standard, and some provide ways to interact with the surrounding system (i.e. a browser).
+
+### Functions
+
