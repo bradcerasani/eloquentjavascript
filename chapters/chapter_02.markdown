@@ -107,3 +107,16 @@ The collection of variables and their values is called the _environment_. Some v
 
 ### Functions
 
+A function is a piece of program wrapped in a value. In a browser environment, the variable `alert` holds a function that displays a dialog box with a message.
+
+ ```js
+ alert("Hello world");
+```
+
+Executing a function is called invoking, calling, or applying it.
+
+Functions can take in values known as _arguments_. The `alert` function only requires one argument (a string) while other functions may need more or differnt arguments.
+
+### The `console.log` Function
+
+
